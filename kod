@@ -1,0 +1,39 @@
+#kod 
+
+
+import os
+
+# Prosty program powitalny w Pythonie
+
+# Pytamy użytkownika o imię
+imie = input("Podaj swoje imię: ")
+
+# Wyświetlamy powitanie
+print("Witaj, " + imie + "! Miło Cię widzieć.")
+
+# Dodajemy plik do repozytorium
+os.system("git add program.py")
+
+# Zatwierdzamy zmiany lokalnie (commit)
+os.system("git commit -m 'Zmiana 1'")
+
+# Wprowadź zmianę w kodzie
+print("To jest nowa linia w kodzie.")
+
+# Dodajemy zmieniony plik do repozytorium
+os.system("git add program.py")
+
+# Zatwierdzamy zmiany lokalnie (commit)
+os.system("git commit -m 'Zmiana 2'")
+
+# Wycofaj jedną z zatwierdzonych zmian (revert)
+os.system("git revert HEAD~1 --no-edit")
+
+# Dodajemy zmieniony plik po wycofaniu zmiany
+os.system("git add program.py")
+
+# Zatwierdzamy zmiany lokalnie (commit)
+os.system("git commit -m 'Zmiana 3'")
+
+# Wysyłamy zmiany do repozytorium zdalnego (push)
+os.system("git push origin master")
